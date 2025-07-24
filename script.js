@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const chat = document.getElementById('chat');
   const userInput = document.getElementById('userInput');
   let timeLeft = 180;
+  let timerStarted = false;
+  let timer;
 
   const botReplies = [
     "Tread carefully with your words.",
@@ -10,9 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
     "My patience is limited, unlike your desire."
   ];
 
+  function startTimer() {
+    const timerEl = document.getElementById('timer');
+    timer = setInterval(() => {
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        timerEl.textContent = "Session Ended";
+        appendMessage("Our time is up, darling. Return when you're worthy.", 'bot');
+        userInput.disabled = true;
+      } else {
+        const mins = Math.floor(timeLeft / 60);
+        const secs = timeLeft % 60;
+        timerEl.textContent = `Session: ${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        timeLeft--;
+      }
+    }, 1000);
+  }
+
   function sendMessage() {
     const text = userInput.value.trim();
     if (!text) return;
+
+    if (!timerStarted) {
+      timerStarted = true;
+      startTimer();
+    }
 
     appendMessage(text, 'user');
     userInput.value = '';
@@ -31,21 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     chat.scrollTop = chat.scrollHeight;
   }
 
-  // Countdown Timer
-  const timerEl = document.getElementById('timer');
-  const timer = setInterval(() => {
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      timerEl.textContent = "Session Ended";
-      appendMessage("Our time is up, darling. Return when you're worthy.", 'bot');
-      userInput.disabled = true;
-    } else {
-      const mins = Math.floor(timeLeft / 60);
-      const secs = timeLeft % 60;
-      timerEl.textContent = `Session: ${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-      timeLeft--;
-    }
-  }, 1000);
+  // Timer now starts on first sendMessage
 
   // Attach sendMessage to button
   document.getElementById('sendBtn').addEventListener('click', sendMessage);
