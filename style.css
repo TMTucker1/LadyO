@@ -40,6 +40,11 @@ header {
   align-self: flex-start;
   background: #3b2946;
 }
+.bot.typing {
+  background: #4a3157;
+  font-style: italic;
+  opacity: 0.8;
+}
 .input-container {
   margin-top: 1rem;
   display: flex;
