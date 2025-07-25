@@ -1,8 +1,0 @@
-{
-  "name": "LadyO Chat",
-  "description": "A simple chat UI for Lady O with timer and tip button.",
-  "version": "1.0.0",
-  "main": "index.html",
-  "author": "TMTucker1",
-  "license": "MIT"
-}
