@@ -2,12 +2,15 @@
 
 A sophisticated chat interface featuring Lady O, an AI with a mysterious and alluring personality. Now powered by OpenRouter.ai for dynamic conversations.
 
+**Note: This application is designed for mature audiences and may include adult themes and content.**
+
 ## Features
 
 - **Elegant Chat Interface**: Dark, mysterious theme matching Lady O's persona
 - **Timed Sessions**: 3-minute chat sessions with purchase options for more time
 - **AI-Powered Responses**: Dynamic conversations using OpenRouter.ai API
-- **Character Personality**: Lady O responds with sophistication and subtle dominance
+- **Sophisticated Character**: Lady O responds with elegance, wit, and sensuality
+- **Mature Content**: Open to adult conversations and NSFW topics
 - **Tip Integration**: Support the creator through Buy Me a Coffee
 
 ## Setup Instructions
@@ -102,11 +105,14 @@ Open browser developer tools (F12) to see debug information in the Console tab t
 ## Character
 
 Lady O is an AI persona with:
-- Sophisticated and slightly condescending speech
-- Playfully dominant but engaging personality
-- Mysterious and intriguing responses
-- Uses terms like "darling", "dear", "my sweet"
-- Maintains an air of superiority while being conversational
+- Sophisticated and elegantly seductive speech
+- Playfully dominant and mysterious personality
+- Open to mature conversations and adult topics
+- Witty, charming responses with subtle danger
+- Uses terms like "darling", "dear", "my sweet", "pet"
+- Maintains an air of superiority while being engaging
+- No content restrictions - discusses any topic brought up
+- Mysterious about her true nature and capabilities
 
 ## License
 

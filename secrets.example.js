@@ -12,6 +12,7 @@ const OPENROUTER_API_KEY = 'your-openrouter-api-key-here';
 // - google/gemma-2-9b-it:free
 // 
 // Paid models (better quality):
+// - mistralai/mixtral-8x7b-instruct (excellent for creative/mature content)
 // - anthropic/claude-3.5-sonnet
 // - openai/gpt-4o
 // - openai/gpt-3.5-turbo
@@ -21,7 +22,7 @@ const OPENROUTER_API_KEY = 'your-openrouter-api-key-here';
 window.OPENROUTER_CONFIG = {
   apiKey: OPENROUTER_API_KEY,
   baseUrl: 'https://openrouter.ai/api/v1',
-  model: 'meta-llama/llama-3.1-8b-instruct:free', // Free model, you can change this
+  model: 'mistralai/mixtral-8x7b-instruct', // High-quality model for Lady O
   siteName: 'Lady O Chat',
   siteUrl: 'http://localhost:8000'
 };
