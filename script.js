@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('⚠️ Could not fetch account info');
       }
       
-      // 3. Test chat with free model
-      console.log('3. Testing chat with free model...');
+      // 3. Test chat with current model
+      console.log('3. Testing chat with current model...');
       const chatBody = {
-        model: 'meta-llama/llama-3.1-8b-instruct:free',
+        model: window.OPENROUTER_CONFIG.model,
         messages: [{ role: "user", content: "Hi" }],
         max_tokens: 10
       };
@@ -99,10 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (testChatResponse.ok) {
         const chatData = await testChatResponse.json();
-        console.log('✅ Chat works with free model:', chatData.choices[0].message.content);
+        console.log('✅ Chat works with current model:', chatData.choices[0].message.content);
       } else {
         const errorData = await testChatResponse.json();
-        console.error('❌ Chat failed with free model:', testChatResponse.status, errorData);
+        console.error('❌ Chat failed with current model:', testChatResponse.status, errorData);
       }
       
     } catch (error) {
